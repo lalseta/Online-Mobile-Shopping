@@ -1,0 +1,236 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage1.master.cs" Inherits="Logo_MasterPage1" %>
+
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="asp" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+        <title></title>  
+     <link rel="Stylesheet" type="text/css" href="StyleSheet.css"/>
+     <link rel="Shortcut Icon" type="image/icon" href="Logo/favicon.ico"/>
+     <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        .style2
+        {
+            width: 387px;
+        }
+        .style4
+        {
+        }
+        .style6
+        {
+            width: 228px;
+        }
+        .style7
+        {
+            width: 301px;
+        }
+            .style10
+         {
+         }
+         .style11
+         {
+             width: 158px;
+         }
+       
+    </style>
+     <style type="text/css">
+        
+            .nav-container { padding-top:10px; padding:0px; padding-bottom:3px;}
+	        .nav { padding:0px; margin:0; font-size:1em; padding-bottom:0px; list-style-type:none; width:150px; font-family:Verdana;}
+             li{background:url(Logo/tail-nav.gif) 0px 0px no-repeat; padding-left:37px;}  
+        
+	         .nav .li:active{background:url(Logo/tail-nav-act.gif) 0px 0px no-repeat;}
+	
+	        .nav .li:hover{background:url(Logo/tail-nav-act.gif) 0px 0px no-repeat; border:100px; }
+	
+	       .nav  .li a { float:none;  padding:10px 0 10px; font-weight:bold; color:#626262;  font-weight:bold; font-size:10px; text-transform:uppercase;}
+	
+	       .nav .li a:hover { color:#fff;}
+	     .nav .li a{border-bottom:1;}
+	      .nav  .li:hover a,
+	      .nav  .li:active a { color:#fff; }
+	      .nav  .li:active > ul{display:block;}
+	     .nav   .li { text-align:left; position:relative; height:30px}
+	       .nav  .li:over { z-index:998; }
+	
+	        .nav li a { display:block; text-decoration:none; }
+	        .nav li a:hover { text-decoration:none;}
+             .lnkbtn{text-decoration:none;
+                    }
+               .lnkbtn:hover{text-decoration:underline;}
+	
+         .style12
+         {
+             font-size: small;
+         }
+	
+         </style>
+</head>
+<body class="body">
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+     <Services>
+                <asp:ServiceReference Path="AutoComplete.asmx" />
+     </Services>
+    </asp:ScriptManager>
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            <div class="main">
+                <div class="main" style="background:#005373;">
+                    <div class="page" >
+                        <div class="header-container" >
+                            <div class="header">
+                                <div class="extra_wrap">
+                                    <asp:Label ID="wlclbl" runat="server" Text="Welcome To our Online Store" CssClass="welcome-msg"></asp:Label>
+                                </div>
+                                <div style="width:100%">
+                                    <table class="style1">
+                                        <tr>
+                                            <td rowspan="2" class="style6">
+                                                <asp:ImageButton ID="ImageButton1" runat="server" CssClass="logo" Height="61px" 
+                                        Width="213px" ImageUrl="~/Logo/images.jpg" PostBackUrl="~/Home.aspx" />
+                                            </td>
+                                            <td class="style2">
+                                                <div class="extra_wrap">
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" 
+                                                    onclick="LinkButton1_Click" ForeColor="#FFFFFF"  CssClass="lnkbtn">My Account</asp:LinkButton>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" 
+                                                    onclick="LinkButton2_Click" ForeColor="#FFFFFF"  CssClass="lnkbtn">My Cart</asp:LinkButton>
+                                                   <%-- <a href="shoppingcart.aspx?url=shoppingcart.aspx" runat="server">My Cart</a> --%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <asp:LinkButton ID="Login" runat="server" PostBackUrl="~/login1.aspx" 
+                                                 CausesValidation="False" onclick="Login_Click" ForeColor="#FFFFFF"   CssClass="lnkbtn">Log In</asp:LinkButton>
+                                                    <asp:LinkButton ID="Logout" runat="server" onclick="Logout_Click" 
+                                                 Visible="False" CausesValidation="False" ForeColor="#FFFFFF"   CssClass="lnkbtn">Log Out</asp:LinkButton>
+                                                </div>
+                                            </td>
+                                            <td class="style4" align="right" >
+                                                <table class="style1">
+                                                    <tr >
+                                                        <td rowspan="2" >
+                                                            <asp:ImageButton ID="imgbtn" runat="server" ImageUrl="~/Logo/scart.jpg" 
+                                                            onclick="imgbtn_Click" />
+                                                        </td>
+                                                        <td class="style7" >
+                                                            <h3 class="h">
+                                                                Shopping Cart</h3>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="style7">
+                                                            <asp:Label ID="lblcart" runat="server" Text="You have No item in your cart" 
+                                                          Font-Size="Small" CssClass="lbl" ForeColor="#FFFFFF" ></asp:Label>
+                                                            &nbsp;
+                                                            <asp:Label ID="lblrs"
+                                                             runat="server" Text="&#8377;00.00"  Visible="False" ForeColor="#FFFFFF" ></asp:Label>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page">
+                    <div class="extra_wrape">
+                        <ul class="link-menu">
+                            <li>
+                                <asp:LinkButton ID="LinkButton4" runat="server" onclick="LinkButton4_Click"  >Home</asp:LinkButton>
+                            </li>
+                            <li>
+                                <asp:LinkButton ID="LinkButton5" runat="server" PostBackUrl="~/Default.aspx" 
+                                    CausesValidation="False" >Contact Us</asp:LinkButton>
+                            </li>
+                            <li>
+                                <asp:LinkButton ID="LinkButton6" runat="server" PostBackUrl="~/Help.aspx" >Help</asp:LinkButton>
+                            </li>
+                            <li class="last">
+                                <asp:LinkButton ID="LinkButton7" runat="server" PostBackUrl="~/About.aspx" >About Us</asp:LinkButton>
+                            </li>
+                        </ul>
+                        <br />
+                        <br />&nbsp;&nbsp;<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                        <asp:AutoCompleteExtender runat="server" ID="autoComplete1" TargetControlID="Textbox1" ServicePath="AutoComplete.asmx" ServiceMethod="GetCountriesList" MinimumPrefixLength="1" EnableCaching="true" >
+                        </asp:AutoCompleteExtender>
+                        <asp:Button ID="Button1" runat="server"  CssClass="button"
+                           Height="26px" Width="25px" BackColor="White" CausesValidation="False" 
+                            onclick="Button1_Click" />
+                        &nbsp;
+                    </div>
+                    <hr />
+                    <div id="div1">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                        </asp:ContentPlaceHolder>
+                        <table class="style1" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td class="style11" valign="top" >
+                                    <table border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td valign="middle">
+                                                <div style="width: 154px;" >
+                                                    <asp:DataList ID="DataList1" runat="server">
+                                                        <ItemTemplate>
+                                                            <div class="nav-container">
+                                                                <ul class="nav" style="border-bottom:1px dashed #626262;">
+                                                                    <li class="li">
+                                                                        <a href='Collection.aspx?cid=<%#Eval("categoryid")%> &name=<%#Eval("categoryname") %>'>
+                                                                        <%#Eval("categoryname") %></a></li>
+                                                                </ul>
+                                                            </div>
+                                                            <%--<a href='login1.aspx?categoryid=<%#Eval("categoryid") %>'><%#Eval("categoryname") %></a>--%>
+                                                        </ItemTemplate>
+                                                    </asp:DataList>
+                                                    <br />
+                                                    <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+                                                    </asp:ContentPlaceHolder>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td class="style10">
+                                    <div>
+                                        <table class="style1">
+                                            <tr>
+                                                <td class="gk">
+                                                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                                                    </asp:ContentPlaceHolder>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+             
+        </asp:ContentPlaceHolder>
+            </div> 
+    <div class="main"  style="background:#215676;">
+    <div class="page">
+    <div class="lbl" style="font-size:13px">
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 
+        <span style="color: #FFFFFF;">Policies: Terms of use | Security | Privacy&nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="style12" 
+            style="color: rgb(255, 255, 255); font-family: Verdana, Arial, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(33, 86, 118); display: inline !important; float: none;">
+        
+        ©JENITH & RAJ</span>&nbsp;2016 All Right Reserved.</span></div>
+        </div>
+        </div>
+    </form>
+        </body>
+</html>

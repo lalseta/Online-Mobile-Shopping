@@ -1,0 +1,191 @@
+﻿.body  
+{
+		margin:0;
+      text-decoration:none;
+ }
+.main
+{
+  margin:0; 
+  
+    background-color:White;
+}
+.page
+{
+	
+    margin:0 auto;
+    padding:0px 0 10px 0;
+    position:relative;
+    text-align:left;
+    width:997px;
+    top: 2px;
+    left: 2px;
+}
+.header-container 
+{ 
+    position:relative; 
+  z-index:999;
+    top: -3px;
+    left: -1px;
+    height: 91px;
+}
+.header 
+{ 
+    height:147px;
+    }
+.extra_wrap
+{
+	font-size:15px; 
+    width:100%;
+    overflow:hidden;
+   font-family:Verdana;
+  }
+   .header .welcome-msg 
+{ 
+    font-weight:bold; 
+  text-align:right; 
+  padding-right:150px;
+   font-size:12px; 
+   color:#FFFFFF; 
+   float:right; 
+   padding-top:8px;
+   font-family:Verdana;
+    }
+    .header .logo 
+    {
+         float:left;
+          text-decoration:none !important;
+           margin-top:0px; 
+     }
+     .quick-access
+     {
+         padding-top:8px;
+          float:Left; 
+          
+           padding-left:0px;
+     }
+  .link
+  { 
+      float:left;
+       padding-top:20px;
+    width: 338px;
+  
+}
+.link  li
+ { 
+     float:left;
+     background:url(Logo/marker.gif) left 3px no-repeat;
+      padding-left:19px; 
+      margin-left:0px;
+    height: 14px;
+    list-style-type:none;
+  
+}
+.link  li.last
+{
+     background:none!important;
+     }
+.linke  li a
+{
+     text-decoration:none; 
+     font-size:11px; 
+     font-weight:bold; 
+     color:#666666; 
+   font-family:Verdana;
+     }
+.linke  li a:hover
+{ 
+    color:#4a8cf6;
+    }
+   .block-cart-header 
+   { 
+      
+       height: 66px;
+		margin-left: 536px; 
+       margin-top: 0px
+    }
+    .block-cart-header h3
+    {
+        font-size:11px; 
+        text-transform:uppercase;
+        color:#404040; 
+        font-weight:bold;
+        font-family:Verdana;
+        }
+        .block-cart-header .cart-content
+        {
+             position:absolute;
+              left:0; 
+              top:-18px;
+               z-index:9999;
+                width:230px; 
+                display:none; 
+         }
+ 
+
+.ruler
+{
+ width: 1140px;
+    margin-left: 0px;
+}
+.extra_wrape
+{
+    width:100%;
+ 
+    overflow:hidden;
+   
+  }
+
+
+ .quick-access{ float:right;  width:690px; padding-top:12px;}
+      .block-cart-header { width:149px; position:relative; z-index:9; float:right;background:url(Logo/bg-cart.gif) repeat; padding-top:5px; padding-left:57px; padding-bottom:5px;}
+      .block-cart-header .block-content{ width:140px;}
+      .block-cart-header .empty{font-size:11px; color:#939393;padding-right:10px; }
+      .h
+      {     
+    
+    font-size:11px; 
+        text-transform:uppercase;
+        color:#FFFFFF; 
+        font-weight:bold;
+        font-family:Verdana;
+}
+.link-menu{ float:left; padding-top:20px;  }
+.link-menu  li { float:left;background:url(Logo/border-menu.gif) right 3px no-repeat; padding-right:19px; margin-right:20px; list-style-type:none;}
+.link-menu  li.last{ background:none!important;}
+.link-menu  li a{ text-decoration:none; font-size:11px; font-weight:bold; color:#666666; text-transform:uppercase; font-family:Verdana;}
+.link-menu  li a:hover{ color:#4a8cf6;}
+.extra_wrape .button{background:url(Logo/btn-search.gif) 0px 0px no-repeat; padding-left:23px;text-indent:-9999px; margin-left:0px;
+}
+.extra_wrape  .button:hover{background:url(Logo/btn-search.gif) 0px -23px no-repeat;}
+.main { margin:0; border-bottom:1px solid #ebebeb; }
+.lbl
+{
+	font-family:Verdana;
+	font-weight:lighter;
+	
+}
+.btn 
+{
+	cursor:pointer;
+	-moz-box-shadow:inset 2px 1px 0px -7px #bbdaf7;
+	-webkit-box-shadow:inset 2px 1px 0px -7px #bbdaf7;
+	box-shadow:inset 2px 1px 0px -7px #bbdaf7;
+	background-color:#79bbff;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:3px 18px;
+	text-decoration:none;
+	text-shadow:0px 0px 0px #528ecc;
+}.btn:hover {
+	background-color:#378de5;
+}.btn:active {
+	position:relative;
+	top:1px;
+}
